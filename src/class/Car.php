@@ -3,7 +3,7 @@
 require_once 'Vehicle.php';
 
 
-class Car extends Vehicle{
+class Car extends Vehicle implements LightableInterface {
 
      const ALLOWED_ENERGIES = [
         'fuel',
@@ -19,6 +19,7 @@ class Car extends Vehicle{
     private $stockCapacity;
 
     private $stock;
+
 
     public function __construct(string $color, int $nbSeats, string $energy, int $stockCapacity)
     {
@@ -84,5 +85,15 @@ class Car extends Vehicle{
             $sentence .=' in filling...';
         }
         return $sentence;
+    }
+
+    public function switchOn(): string
+    {
+        return 'true';
+    }
+
+    public function switchOff(): string
+    {
+       return  'false';
     }
 }
