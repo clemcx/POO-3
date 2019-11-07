@@ -1,7 +1,7 @@
 <?php
 
 require_once 'HighWay.php';
-final class PedestrianWay
+final class PedestrianWay extends HighWay
 {
     protected $maxSpeed = 10;
     protected $nbLane = 1;
@@ -10,7 +10,7 @@ final class PedestrianWay
     public function addVehicle($vehicle)
     {
         if (($vehicle instanceof Bicycle) || ($vehicle instanceof Skateboard)) {
-            parent::setcurrentVehicles($vehicle);
+            $this->setcurrentVehicles((array)$vehicle);
         }
     }
 }

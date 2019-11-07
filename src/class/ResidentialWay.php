@@ -4,10 +4,10 @@ require_once 'HighWay.php';
 final class ResidentialWay extends HighWay
 {
 
-    public function addVehicle(Vehicle $vehicle)
+    public function addVehicle(Vehicle $vehicle): void
     {
     if ($vehicle instanceof Vehicle){
-    array_push($this->currentVehicles,$vehicle);
+    $this->currentVehicles[] = $vehicle;
     }
 }
 }

@@ -45,10 +45,11 @@ abstract class HighWay
 
     /**$nbLane
      * @param int $nbLane
+     * @return int
      */
-    public function setNbLane(int $nbLane): HighWay
+    public function setNbLane(int $nbLane): int
     {
-        $this->nbLane = $nbLane;
+       return $this->nbLane = $nbLane;
     }
 
     /**
@@ -61,11 +62,11 @@ abstract class HighWay
 
     /**
      * @param int $maxSpeed
-     * @return HighWay
+     * @return int
      */
-    public function setMaxSpeed(int $maxSpeed): HighWay
+    public function setMaxSpeed(int $maxSpeed): int
     {
-        $this->maxSpeed = $maxSpeed;
+       return $this->maxSpeed = $maxSpeed;
     }
 
     abstract public function addVehicle(Vehicle $vehicle);
